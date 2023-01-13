@@ -45,8 +45,4 @@ for x in range(settings.GRID_WIDTH_SIZE):
         )
 
 Cell.randomize_cells()
-print(Cell.all)
-for i in Cell.all:
-    if i.is_mine == True:
-        print(i.x, i.y)
 root.mainloop()
