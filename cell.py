@@ -88,7 +88,11 @@ class Cell():
         return counter
 
     def show_cell(self):
+        color_numb = {'blue': 1,'green': 2, 'red': 3, 'Purple': 4}
         if not self.is_opened:
+            for key,value in color_numb.items():
+                if self.cell_mine_surrounded_length == value:
+                    self.cell_btn_object.configure(fg=f'{key}')    
             Cell.cell_count -= 1
             self.cell_btn_object.configure(text=f'{self.cell_mine_surrounded_length}',bg='#f0f0f3')
             if Cell.cell_count_object:
